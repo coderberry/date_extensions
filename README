@@ -1,13 +1,33 @@
-DateExtensions
-==============
+Date Extensions
+===============
 
-Introduction goes here.
+Simple plugin to extend the Date class in order to get the next business day from a date.
 
 
 Example
 =======
 
-Example goes here.
+Use an existing business day:
 
+  >> d = Date.civil(2009,11,2)
+  => Mon, 02 Nov 2009
+  >> d.to_next_business_day
+  => Mon, 02 Nov 2009
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Use a holiday:
+
+  >> d = Date.civil(2009,12,25)
+  => Fri, 25 Dec 2009
+  >> d.to_next_business_day
+  => Mon, 28 Dec 2009
+
+Use a weekend:
+
+  >> d = Date.civil(2009,11,7)
+  => Sat, 07 Nov 2009
+  >> d.to_next_business_day
+  => Mon, 09 Nov 2009
+
+  
+
+Copyright (c) 2009 Eric Berry, released under the MIT license
